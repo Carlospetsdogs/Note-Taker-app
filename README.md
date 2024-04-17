@@ -1,7 +1,9 @@
 # Note Taker app
 
-# Usage 
+## Usage:
+This application uses an Express.js back end and will save and retrieve note data from a JSON file.
 
-# Starter code Repo:
+## Starter code Repo:
+https://github.com/coding-boot-camp/miniature-eureka
 
-# Deployed application link: 
+## Deployed application link: 
