@@ -10,7 +10,7 @@ class Store {
     }
 
     write(note) {
-        return writeFileSync('db/db.json', JSON.stringify(note));
+        return writeFileAsync('db/db.json', JSON.stringify(note));
     }
 
     getNotes() {
@@ -24,27 +24,27 @@ class Store {
             }
 
             return parsedNotes;
-        };
+        });
     }
 
     addNote(note) {
-        const { title , text } = note;
+        const { title, text } = note;
 
         if (!title || !text) {
             throw new Error("Note 'title' and 'text' cannot be left blank");
         }
 
         return this.getNotes()
-            .then((notes) => [...notes, newNote])
+            .then((notes) => [...notes, note])
             .then((updatedNotes) => this.write(updatedNotes))
-            .then(() => newNote);
+            .then(() => note);
     }
 
-    removeNote(id){
+    removeNote(id) {
         return this.getNotes()
-            .then((notes) => notes.filter((note) => note.id !==id))
+            .then((notes) => notes.filter((note) => note.id !== id))
+            .then((filteredNotes) => this.write(filteredNotes));
     }
 }
-
 
 module.exports = new Store();

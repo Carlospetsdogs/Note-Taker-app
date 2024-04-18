@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 let db = require('../db/db.json');
 
-
+// allowing the app to request and respond
 router.get('/notes' , ( req , res ) => {
     res.json(db)
 });
@@ -21,5 +21,5 @@ router.post('/notes' , ( req , res ) => {
 });
 
 
-
+// exporting app 
 module.exports = router;
