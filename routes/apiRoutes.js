@@ -12,7 +12,7 @@ router.post('/notes' , ( req , res ) => {
     let newNote = {
         title: req.body.title,
         text: req.body.text,
-        id: Math.random()
+    
     }
 
     db.push(newNote)
