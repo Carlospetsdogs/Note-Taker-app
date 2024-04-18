@@ -10,8 +10,12 @@ class Store {
     }
 
     write(note) {
-        return writeFileSync('db/db.json' JSON.stringify(note));
-    }
-
+        return writeFileSync('db/db.json' , JSON.stringify(note));
+    } 
     
+    getNotes() {
+        return this.read().then((notes) => {
+            let parsedNotes;
+        }
+    }
 }
