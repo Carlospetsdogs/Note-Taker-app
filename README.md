@@ -4,9 +4,9 @@
 This application uses an Express.js back end and will save and retrieve note data from a JSON file. The purpose is to allow users to create notes and save them and/or delete them.
 
 ## Installation:
--need Express
--run an 'npm install'
--once listening on Port 3001, run 'node server.js'
+-need Express js installed
+-run an `npm install`
+-once listening on Port 3001, run `node server.js`
 
 ## Starter code Repo:
 https://github.com/coding-boot-camp/miniature-eureka
